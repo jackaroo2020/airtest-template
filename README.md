@@ -84,5 +84,6 @@ https://airtest.doc.io.netease.<br/> com/IDEdocs/device_connection/2_android_faq
 该项目是个人基于Airtest搭建的模块框架，若有不足之处，欢迎指正。如果对你有帮助，给个 star 哟~~ 谢谢 PR~~👏👏
 
 若有问题，可以邮件或者添加微信联系我。<br/> 
-邮箱：1981774464@qq.com 微信<br/> 
+邮箱：1981774464@qq.com <br/> 
+微信号：
 <img src="./mydoc/images/wp.jpg" width = "200" height = "200" div align=center />
