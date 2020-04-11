@@ -65,8 +65,18 @@ pip install DBUtils<br/>
 
 2、 启动方式二<br/> 
 打开myconfig.air,修改启模式为dev:   start_model=”dev”<br/> 
-![avatar](/mydocs/images/5.png)<br/> 
+![avatar](/mydocs/images/5.png)
 
 #### 第四章、常见问题<br/> 
 1、手机连接不上，参考官网尝试解决：<br/> 
 https://airtest.doc.io.netease.<br/> com/IDEdocs/device_connection/2_android_faq/<br/> 
+
+#### 第五章、使用说明书及视频演示资料(收费版)
+以下为脚手架整理的全部资料，供参考，如需资料，请加个人微信号和发邮件哦！<br/> 
+
+![avatar](./mydocs/images/pay_1.png)<br/> 
+![avatar](/mydocs/images/pay_2.png)<br/> 
+![avatar](/mydocs/images/pay_3.png)<br/> 
+![avatar](/mydocs/images/pay_4.png)<br/> 
+![avatar](/mydocs/images/pay_5.png)<br/> 
+
