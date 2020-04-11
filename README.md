@@ -50,10 +50,11 @@ pip install DBUtils<br/>
 
 3、启动需要注意的配置细节（******）<br/> 
 * 需要配置python自定义环境。AirtestIDE配置参考图如下：<br/> 
-![avatar](/mydoc/images/2.png)
+<img src="./mydoc/images/2.png" width = "700"  /><br/>
+<!-- ![avatar](/mydoc/images/2.png) -->
 
 * myconfig.air 数据库配置参考图如下：<br/> 
-![avatar](/mydoc/images/3.png)
+<img src="./mydoc/images/3.png" width = "700"  /><br/>
 
 4、 数据库表结构，运行前需要初始化表结构，并在ui_case表中初始化用例场景初始化信	息（******）。<br/> 
 
@@ -61,11 +62,11 @@ pip install DBUtils<br/>
 1、 启动方式一(******)<br/> 
 (1)打开myconfig.air,修改启模式为prod:   start_model=”prod”<br/> 
 (2)运行startrun.air模块，此模块将加载bussinessdao.air模块下的run方法。从数据库选择需要运行的测试用例。数据库表的配置详见第二章数据库表设计及说明。<br/> 
-![avatar](/mydoc/images/4.png)<br/> 
+<img src="./mydoc/images/4.png" width = "700"  /><br/>
 
 2、 启动方式二<br/> 
 打开myconfig.air,修改启模式为dev:   start_model=”dev”<br/> 
-![avatar](/mydoc/images/5.png)
+<img src="./mydoc/images/5.png" width = "700"  /><br/>
 
 #### 第四章、常见问题<br/> 
 1、手机连接不上，参考官网尝试解决：<br/> 
