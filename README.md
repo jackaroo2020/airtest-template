@@ -72,7 +72,11 @@ pip install DBUtils<br/>
 https://airtest.doc.io.netease.<br/> com/IDEdocs/device_connection/2_android_faq/<br/> 
 
 #### 第五章、使用说明书及视频演示资料(服务收费版>=(9.9元)
-以下为脚手架整理的全部资料，供参考，如需资料，请加个人微信号哦！<br/> 
+以下为脚手架整理的全部资料，供参考，如需资料，请加个人微信号<br/> 
+微信号：<br/> 
+<img src="./mydoc/images/wp.jpg" width = "200" height = "200" /><br/> 
+邮箱：1981774464@qq.com <br/><br/> 
+资料部分截图如下所示：<br/>
 ![avatar](/mydoc/images/pay_1.png)<br/> 
 ![avatar](/mydoc/images/pay_2.png)<br/> 
 ![avatar](/mydoc/images/pay_3.png)<br/> 
@@ -80,13 +84,11 @@ https://airtest.doc.io.netease.<br/> com/IDEdocs/device_connection/2_android_faq
 ![avatar](/mydoc/images/pay_5.png)<br/> 
 
 
-#### 结尾
-该项目是个人基于Airtest搭建的模块框架，若有不足之处，欢迎指正。如果对你有帮助，给个 star 哟~~ 谢谢 PR~~👏👏
+#### 支持
+该项目是个人基于Airtest搭建的模块框架，如果你发现了新的 bug请新建一个 issue，欢迎指正。如果对你有帮助，给个 star 哟👏👏
 
-若有问题，可以邮件或者添加微信联系我。<br/> 
-邮箱：1981774464@qq.com <br/> 
-微信号：<br/> 
-<img src="./mydoc/images/wp.jpg" width = "200" height = "200" div align=center />
-&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="./mydoc/images/w.jpg" width = "200" height = "200" div align=center />
+
+#### 捐赠
+如果觉得还不错，请作者喝杯咖啡吧 ☺
+<img src="./mydoc/images/w.jpg" width = "200" height = "220" />
 
