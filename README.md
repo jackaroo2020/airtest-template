@@ -85,5 +85,8 @@ https://airtest.doc.io.netease.<br/> com/IDEdocs/device_connection/2_android_faq
 
 若有问题，可以邮件或者添加微信联系我。<br/> 
 邮箱：1981774464@qq.com <br/> 
-微信号：
+微信号：<br/> 
 <img src="./mydoc/images/wp.jpg" width = "200" height = "200" div align=center />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="./mydoc/images/w.jpg" width = "200" height = "200" div align=center />
+
