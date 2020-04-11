@@ -1,10 +1,8 @@
 #coding = utf-8
 
-"""
-数据库操作封装通用工具模块函数
-"""
-
 __author__ = "LT"
+__title__ = "数据库模版函数库"
+__desc__ = """数据库操作封装通用工具模块函数库"""
 
 from airtest.core.api import *
 

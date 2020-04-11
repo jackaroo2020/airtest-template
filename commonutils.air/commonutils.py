@@ -1,9 +1,8 @@
 #coding = utf-8
-"""
- 公共函数及常量工具类
-"""
 
 __author__ = "LT"
+__title__ = "公共函数类工具类"
+__desc__ = """公共函数工具类"""
 
 import random
 import socket

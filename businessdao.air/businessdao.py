@@ -1,10 +1,8 @@
 #coding = utf-8
 
-"""
-业务测试用例启动运行操作记录到数据库函数工具类模版
-"""
-
 __author__ = "LT"
+__title__ = "业务测试用例数据库操作记录模版库"
+__desc__ = """业务测试用例启动运行操作记录到数据库函数操作记录模版库"""
 
 from airtest.core.api import *
 
@@ -14,7 +12,7 @@ from mycases import *
 using("dbutils.air")
 from dbutils import *
 using("commonutils.air")
-from commonutils import getIp,result
+from commonutils import getIp,SUCCESS,FAIL
 using("myconfig.air")
 from myconfig import CLASSIFY
 
@@ -22,11 +20,6 @@ import datetime
 import traceback
 
 # -------------------------公共常量 start start--------------------------------------
-# 状态码 pass and fail
-SUCCESS = result.get("200")
-FAIL = result.get("500")
-# 启动应用classify标识 由配置类获取
-CLASSIFY = CLASSIFY
 # 方法参数集合
 # methodsTuple = methodsTuple
 # -------------------------公共常量 end------------------------------------------------
@@ -111,7 +104,7 @@ def run():
                  success = success + 1
             # 记录用例执行日志
             insertCaseLog(logId,caseId,t3,t3StrTime,expResult,resp)
-            print(method+"():用例场景------------------>运行结束，运行结果为："+resp.get('result',"-1"))
+            print("\n"+method+"():用例场景------------------>运行结束，运行结果为："+resp.get('result',"-1"))
             log(method+"():用例场景------------------>运行结束，运行结果为："+resp.get('result',"-1"))# 报告展示使用
         else:
             print(method+"():用例场景------------------>找不到对应的用例，请检查测试用例method名称是否填写正确")
@@ -127,5 +120,9 @@ def run():
     updateLogParams = getUpdateLogParams(t1,total,success,logId)
     # 执行结束更新主日志表信息
     updateLog(*updateLogParams)  
+    print("所有的用例场景------------------>运行结束,运行总数为：%s, 失败个数为：%s" % (total,total-success))
+    log("所有的用例场景------------------>运行结束,运行总数为：%s, 失败个数为：%s" % (total,total-success))# 报告展示使用
+    # 自动生成报告  自定义日志目录，则自动生成
+    auto_generate_report(auto_report_Flag)
     
 

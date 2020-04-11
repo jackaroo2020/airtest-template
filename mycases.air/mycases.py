@@ -1,8 +1,8 @@
 #coding = utf-8
 
-"我的所有测试场景"
-
 __author__ = "LT"
+__title__ = "场景用例"
+__desc__ = """我的所有测试场景用例集"""
 
 # -------------------------引入依赖 start-------------------------------------------------------------
 from airtest.core.api import *
@@ -12,29 +12,38 @@ import os
 using("commonutils.air")
 from commonutils import SUCCESS,FAIL,resp,createFileDirs
 using("myconfig.air")
-from myconfig import logDir, auto_report_Flag,start_model,case_01_params
+from myconfig import *
 
-# auto_setup(basedir=None, devices=None, logdir=None, project_root=None, compress=0)[源代码]
-targetLodDir = createFileDirs(logDir)
-# 当前目录
-root_dir = os.getcwd()
-print("创建执行日志目录----------》",targetLodDir)
-auto_setup(__file__,logdir=targetLodDir)
+# 初始化定义
+auto_report_Flag = False
 
+# 是否自定义日志目录，自定义日志目录，则自动生成报告在当前目录下
+if len(logDir) > 0:
+    # auto_setup(basedir=None, devices=None, logdir=None, project_root=None, compress=0)[源代码]
+    targetLodDir = createFileDirs(logDir)
+    # 当前目录
+    root_dir = os.getcwd()
+    print("创建执行日志目录----------》",targetLodDir)
+    auto_setup(__file__,logdir=targetLodDir)
+    # 自动生成报告打开标志位
+    auto_report_Flag = True
+else:
+    auto_setup(__file__) # 保持默认参数
+    
 from poco.drivers.android.uiautomation import AndroidUiautomationPoco
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 # -------------------------引入依赖 end---------------------------------------------------------------
 
 
 # -------------------------公共常量 start-------------------------------------------------------------
-print("auto_report_Flag: %s" % (auto_report_Flag))
+print("logDir: %s" % (logDir))
 # -------------------------公共常量  end----------------------------------------------------------------
 
 
 # -------------------------公共函数 start----------------------------------------------------------------
-def auto_generate_report(auto_report_Flag=False):
+def auto_generate_report(auto_report_Flag):
     '''自动生成报告'''
-    if auto_generate_report==True:
+    if auto_report_Flag:
         print("auto_generate_report--------------start")
         # generate html report
         from airtest.report.report import simple_report
@@ -44,7 +53,7 @@ def auto_generate_report(auto_report_Flag=False):
         simple_report(root_dir, logpath=targetLodDir, output=output_file)
         print("auto_generate_report--------------end")
 
-def restartApp(appname="",timeout=5):
+def restartApp(appname="com.google.android.calculator",timeout=2):
     '''重启应用'''
     stop_app(appname)
     start_app(appname)
@@ -66,17 +75,40 @@ def error(method=""):
 
 # -------------------------测试场景用例 start--------------------------------------------------------------------
 def case_01():
-    '''01 [H5】未注册的用户输入正确的验证码进行注册，注册成功'''
+    '''01 [APP】test (1+2)==3'''
     resp["result"] = FAIL
     try:
-        # step1: 
-        #   
+        # test (1+2)==3
+        poco("com.google.android.calculator:id/digit_1").click()
+        poco("com.google.android.calculator:id/op_add").click()
+        poco("com.google.android.calculator:id/digit_2").click()
+        poco("com.google.android.calculator:id/eq").click()
+        result = poco("com.google.android.calculator:id/result").get_text()
+        assert_equal(result, "3")
+
+        ## test swipe
+        poco("com.google.android.calculator:id/arrow").click()
+        sleep(1.0)
+        fun_log = poco("com.google.android.calculator:id/fun_log").exists()
+        assert_equal(fun_log, True)
+        poco("com.google.android.calculator:id/arrow").swipe([0.6884, 0.01])
+        sleep(1.0)
+
+        ## touch all numbers for fun
+        poco("com.google.android.calculator:id/clr").click()
+        for btn in poco(nameMatches="com.google.android.calculator:id/digit_\d"):
+            print(btn)
+            btn.click()
+
+        result2 = poco("com.google.android.calculator:id/formula").get_text()
+        assert_equal(result2, "7894561230")
+        
         # 响应成功
         success(method="case_01")
     except:
         error(method="case_01")
     # 重启应用
-    # restartApp()  
+    restartApp()  
     return resp
 
 
@@ -101,8 +133,7 @@ def test_uicase():
         log(method+"():用例场景------------------>开始执行") # 报告展示使用
         print(method+"():用例场景------------------>开始执行") # 报告展示使用
         resp = eval(method+"()")
-        if SUCCESS == resp.get('result',"-1"):
-        else:
+        if not SUCCESS == resp.get('result',"-1"):
             fail = fail +1
         print(method+"():用例场景------------------>运行结束，结果为："+resp.get('result',"-1")) 
         log(method+"():用例场景------------------>运行结束，结果为："+resp.get('result',"-1")) 
@@ -111,13 +142,15 @@ def test_uicase():
     
 # 用例调试模式启动运行，从start_run启动时候，需要注销此
 if start_model=="dev":
+    print("启动模式为dev模式")
     test_uicase()
+    # 自动生成报告  自定义日志目录，则自动生成
+    auto_generate_report(auto_report_Flag)
+elif start_model=="prod":
+    print("启动模式为prod模式")
 else:
-    print("请检查myconfig配置中启动模式是否改为dev模式")    
+    print("请检查myconfig配置中启动模式是为prod或者dev启动模式")   
 # ---------------------------测试函数 end---------------------------------------------------------
-
-# 自动生成报告  可以自选生成与否
-auto_generate_report(auto_report_Flag)
 
 
 
