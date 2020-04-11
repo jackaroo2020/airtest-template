@@ -17,7 +17,7 @@ https://blog.csdn.net/qq3399013670/article/details/97386205
 
 #### 第二章、UI框架配置说明（*****） <br/>     
 1、框架结构       
-![avatar](/mydocs/images/1.png)
+![avatar](/mydoc/images/1.png)
 
 * businessdao.air: 提供用例场景运行日志插入与更新数据库操作
 * commonutils.air: 提供公共的工具类函数，如自动生成手机号，身份证号，ip等函数
@@ -50,10 +50,10 @@ pip install DBUtils<br/>
 
 3、启动需要注意的配置细节（******）<br/> 
 * 需要配置python自定义环境。AirtestIDE配置参考图如下：<br/> 
-![avatar](/mydocs/images/2.png)
+![avatar](/mydoc/images/2.png)
 
 * myconfig.air 数据库配置参考图如下：<br/> 
-![avatar](/mydocs/images/3.png)
+![avatar](/mydoc/images/3.png)
 
 4、 数据库表结构，运行前需要初始化表结构，并在ui_case表中初始化用例场景初始化信	息（******）。<br/> 
 
@@ -61,11 +61,11 @@ pip install DBUtils<br/>
 1、 启动方式一(******)<br/> 
 (1)打开myconfig.air,修改启模式为prod:   start_model=”prod”<br/> 
 (2)运行startrun.air模块，此模块将加载bussinessdao.air模块下的run方法。从数据库选择需要运行的测试用例。数据库表的配置详见第二章数据库表设计及说明。<br/> 
-![avatar](/mydocs/images/4.png)<br/> 
+![avatar](/mydoc/images/4.png)<br/> 
 
 2、 启动方式二<br/> 
 打开myconfig.air,修改启模式为dev:   start_model=”dev”<br/> 
-![avatar](/mydocs/images/5.png)
+![avatar](/mydoc/images/5.png)
 
 #### 第四章、常见问题<br/> 
 1、手机连接不上，参考官网尝试解决：<br/> 
@@ -74,9 +74,9 @@ https://airtest.doc.io.netease.<br/> com/IDEdocs/device_connection/2_android_faq
 #### 第五章、使用说明书及视频演示资料(收费版)
 以下为脚手架整理的全部资料，供参考，如需资料，请加个人微信号和发邮件哦！<br/> 
 
-![avatar](./mydocs/images/pay_1.png)<br/> 
-![avatar](/mydocs/images/pay_2.png)<br/> 
-![avatar](/mydocs/images/pay_3.png)<br/> 
-![avatar](/mydocs/images/pay_4.png)<br/> 
-![avatar](/mydocs/images/pay_5.png)<br/> 
+![avatar](/mydoc/images/pay_1.png)<br/> 
+![avatar](/mydoc/images/pay_2.png)<br/> 
+![avatar](/mydoc/images/pay_3.png)<br/> 
+![avatar](/mydoc/images/pay_4.png)<br/> 
+![avatar](/mydoc/images/pay_5.png)<br/> 
 
