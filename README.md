@@ -89,6 +89,6 @@ https://airtest.doc.io.netease.<br/> com/IDEdocs/device_connection/2_android_faq
 
 
 #### 捐赠
-如果觉得还不错，请作者喝杯咖啡吧 ☺
+如果觉得还不错，请作者喝杯咖啡吧 ☺<br/> 
 <img src="./mydoc/images/w.jpg" width = "200" height = "220" />
 
