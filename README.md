@@ -83,6 +83,6 @@ https://airtest.doc.io.netease.<br/> com/IDEdocs/device_connection/2_android_faq
 <img src="./mydoc/images/pay_5.png" width = "500"  /><br/>
 
 #### 支持
-该项目是个人基于Airtest搭建的模块框架，如有不足之处，欢迎指正。如果对你有帮助，麻烦给个 star 哟👏👏
+该项目是个人基于Airtest搭建的模块框架。如果对你有帮助，在上方给个 star 哟👏👏👏
 
 
