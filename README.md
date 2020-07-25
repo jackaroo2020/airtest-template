@@ -29,13 +29,13 @@ https://blog.csdn.net/qq3399013670/article/details/97386205
 2、运行环境依赖配置
 * 项目启动python环境需要安装pymysql,DButils第三方模块，安装前切换镜像源：       
 将pip源更换到国内镜像。用pip管理工具安装库文件时，默认使用国外的源文件，因此在国内的下载速度会比较慢，可能只有50KB/s。      
-阿里云: http://mirrors.aliyun.com/pypi/simple/ <br/>     
+阿里云: https://mirrors.aliyun.com/pypi/simple/ <br/>     
 中国科技大学: https://pypi.mirrors.ustc.edu.cn/simple/<br/> 
 清华大学: https://pypi.tuna.tsinghua.edu.cn/simple/<br/> 
 临时方法：<br/> 
 pip install 模块名称 -i 镜像源，如：<br/> 
-pip install pymysql -i http://mirrors.aliyun.com/pypi/simple/<br/> 
-pip install DButils -i http://mirrors.aliyun.com/pypi/simple/<br/> 
+pip install pymysql -i https://mirrors.aliyun.com/pypi/simple/<br/> 
+pip install DButils -i https://mirrors.aliyun.com/pypi/simple/<br/> 
 永久方法：<br/> 
 windows文件管理器下输入：%APPDATA%<br/> 
 新建pip文件夹，在pip文件夹下新建pip.ini文件<br/> 
@@ -72,11 +72,10 @@ pip install DBUtils<br/>
 1、手机连接不上，参考官网尝试解决：<br/> 
 https://airtest.doc.io.netease.<br/> com/IDEdocs/device_connection/2_android_faq/<br/> 
 
-#### 第五章、使用说明书及视频演示资料(服务收费版>=(9.9元)
-以下为脚手架整理的全部资料，供参考，如需资料，请加个人微信号<br/> 
-微信号：<br/> 
-<img src="./mydoc/images/wp.jpg" width = "200" height = "200" /><br/> 
-邮箱：1981774464@qq.com <br/><br/> 
+#### 第五章、使用说明书及视频演示资料(服务收费版(19.9元)
+以下为脚手架整理的全部资料，供参考，如需资料，请关注个人微信公众号，获取详细内容<br/> 
+公众号：<br/> 
+<img src="./mydoc/images/gzh.jpg" width = "200" height = "200" /><br/> 
 资料部分截图如下所示：<br/>
 <img src="./mydoc/images/pay_1.png" width = "500"  /><br/>
 <img src="./mydoc/images/pay_2.png" width = "500"  /><br/>
@@ -85,10 +84,6 @@ https://airtest.doc.io.netease.<br/> com/IDEdocs/device_connection/2_android_faq
 <img src="./mydoc/images/pay_5.png" width = "500"  /><br/>
 
 #### 支持
-该项目是个人基于Airtest搭建的模块框架，如果你发现了新的 bug请新建一个 issue，欢迎指正。如果对你有帮助，给个 star 哟👏👏
+该项目是个人基于Airtest搭建的模块框架，如有不足之处，欢迎指正。如果对你有帮助，麻烦给个 star 哟👏👏
 
-
-#### 捐赠
-如果觉得还不错，请作者喝杯咖啡吧 ☺<br/> 
-<img src="./mydoc/images/w.jpg" width = "200" height = "200" />
 
