@@ -73,8 +73,7 @@ pip install DBUtils<br/>
 https://airtest.doc.io.netease.<br/> com/IDEdocs/device_connection/2_android_faq/<br/> 
 
 #### 第五章、使用说明书及视频演示资料(服务收费版(19.9元)
-以下为脚手架整理的全部资料，供参考，如需资料，请关注个人微信公众号，获取详细内容<br/> 
-公众号：<br/> 
+以下为脚手架整理的全部资料，供参考，如需资料，请关注个人微信公众号，获取详细内容：<br/> 
 <img src="./mydoc/images/gzh.jpg" width = "200" height = "200" /><br/> 
 资料部分截图如下所示：<br/>
 <img src="./mydoc/images/pay_1.png" width = "500"  /><br/>
